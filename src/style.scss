@@ -1,0 +1,127 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #1f4037;
+    background: -webkit-linear-gradient(to left, #99f2c8, #1f4037);
+    background: linear-gradient(to left, #99f2c8, #1f4037);
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: 200ms all ease;
+    width: 48px;
+    height: 40px;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.block {
+    padding: 6px 12px;
+    &-vertical {
+        padding: 6px 0;
+    }
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .hash-label {
+        font-style: italic;
+    }
+    .number-label {
+        display: inline-block;
+        text-align: center;
+    }
+    #status {
+        position: relative;
+        padding-left: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        .circle {
+            background-color: #99f2c8;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 12px;
+        }
+        >:nth-child(2) {
+            width: 100%;
+        }
+        &.offline {
+            .circle {
+                background-color: #d02626;
+            }
+        }
+    }
+    .hash {
+        display: inline-block;
+        min-width: 150px;
+        position: relative;
+        &:not(:last-child) {
+            &:after {
+                content: '';
+                border-right: 1px solid #fff;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    #threads {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >:nth-child(2) {
+            padding: 0 24px;
+        }
+    }
+    #power {
+        .slider {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    #site-key {
+        opacity: 0.5;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}

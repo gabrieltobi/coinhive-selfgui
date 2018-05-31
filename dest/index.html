@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div id="status" class="offline">
+            <span class="circle"></span>
+            <span id="data-status">Offline</span>
+            <button id="start-stop">&#9658;</button>
+        </div>
+        <div class="block text-center">
+            <h1 id="data-hash-tax">-</h1>
+            <h5 class="hash-label">hashes/s</h5>
+        </div>
+        <div class="block text-center">
+            <div class="hash">
+                <h3 id="data-hash-total">-</h3>
+                <h5 class="hash-label">Total Hashes</h5>
+            </div>
+            <div class="hash">
+                <h3 id="data-hash-accepted">-</h3>
+                <h5 class="hash-label">Accepted Hashes</h5>
+            </div>
+        </div>
+        <div id="threads" class="block-vertical">
+            <button id="threads-decreaser">-</button>
+            <div class="text-center">
+                <h2 id="data-threads">-</h2>
+                <h5 class="hash-label">Threads</h5>
+            </div>
+            <button id="threads-increaser">+</button>
+        </div>
+        <div id="power" class="block">
+            <div class="text-center">
+                <h2 id="data-power">-</h2>
+                <input class="slider" type="range" id="data-power-slide" min="1" max="100" value="100">
+                <h5 class="hash-label">Power</h5>
+            </div>
+        </div>
+        <div class="block" id="site-key">
+            <h6 id="data-site-key"></h6>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
